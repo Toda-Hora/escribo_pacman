@@ -40,15 +40,16 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.black,
       ),
       body: BonfireTiledWidget(
+          showCollisionArea: false,
           cameraConfig: CameraConfig(
               moveOnlyMapArea: true, sizeMovementWindow: Vector2(0, 0)),
-          player: Jogador(Vector2(114, 188)),
+          player: Jogador(Vector2(216, 360)),
           joystick: Joystick(
               keyboardConfig: KeyboardConfig(
             keyboardDirectionalType: KeyboardDirectionalType.wasdAndArrows,
           )),
           map: TiledWorldMap('mapa_pacman.json',
-              forceTileSize: const Size(20, 20))),
+              forceTileSize: const Size(16, 16))),
     );
   }
 }
